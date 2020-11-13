@@ -1,5 +1,6 @@
 
-/* 1. _________________________________________________________________
+/* 1. Hero Bullets Challenge
+_________________________________________________________________
 A hero is on his way to the castle to complete his mission. 
 However, he's been told that the castle is surrounded with a couple of powerful dragons! 
 Each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.
@@ -18,10 +19,18 @@ We can solve that hero's problem using a function with a conditional:
 */
 function hero(bullets,dragons){                                                                
     if (bullets >= (dragons * 2)){
-    return  true;
+        return  true;
     } else {
-    return  false;
+        return  false;
     }
-   }
+   };
+hero(14,7);
+console.log(hero(14,7));
+
+/* Discovered another way to solve the hero's problem using 
+a shorter and best practice function.*/
+function hero(bullets, dragons){
+    return bullets >= dragons * 2
+  }
 hero(14,7);
 console.log(hero(14,7));
