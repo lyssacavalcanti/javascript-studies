@@ -139,4 +139,34 @@ function doubleInteger(i) {
 doubleInteger(10);
 console.log(doubleInteger(10));
 
+
+/* 6. MULTIPLY
+_________________________________________________________________
+This code does not execute properly. Try to figure out why.
+
+function multiply(a, b){
+  a * b
+}
+*/
+
+/* LOGICAL REASONING:
+    > Analyze what's wrong in the function.
+    > Fix the wrong part.
+    > Make sure that it's working.
+*/
+
+/* RESOLUTION:
+All the functions are made to give us some type of return and that's was exacly 
+missing on the function given.
+*/
+
+multiply = function (a, b) {
+    return a * b;
+  }
+multiply(32,12);
+console.log(multiply(32,12));
+
+
+
+
   /* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
