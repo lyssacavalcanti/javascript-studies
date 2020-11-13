@@ -19,6 +19,7 @@ Return "true" if yes, "false" otherwise.
 /* RESOLUTION:
 We can solve that hero's problem using a function with a conditional:
 */
+
 function hero(bullets,dragons){                                                                
     if (bullets >= (dragons * 2)){
         return  true;
@@ -31,6 +32,7 @@ console.log(hero(14,7));
 
 /* Discovered another way to solve the hero's problem using 
 a shorter and best practice function.*/
+
 function hero(bullets, dragons){
     return bullets >= dragons * 2
   }
@@ -94,3 +96,24 @@ function reverseWords(str){
 
 reverseWords("The greatest victory is that which requires no battle.");
 console.log(reverseWords("The greatest victory is that which requires no battle."));
+
+/* RETURNING STRINGS - CHALLENGE
+_________________________________________________________________
+Make a function that will return a greeting statement that uses an input. 
+Your program should return, "Hello, <name> how are you doing today?".
+SQL: return results in a column named greeting.
+Make sure you type the exact thing I wrote or the program may not execute properly.
+*/
+
+/* LOGICAL REASONING:
+    > Write a greeting statement and insert a random name came from SQL.
+*/
+
+/* RESOLUTION:
+That challenge can be solved using a function indexing a name in ES6 format.
+*/
+function greet(name){
+    return `Hello, ${name}! How are you doing today?`
+  }
+greet("Fernando");
+console.log(greet("Fernando"));
