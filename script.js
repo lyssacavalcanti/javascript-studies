@@ -1,5 +1,5 @@
 
-/* 1. Hero Bullets Challenge
+/* 1. HERO'S BULLET - CHALLENGE
 _________________________________________________________________
 A hero is on his way to the castle to complete his mission. 
 However, he's been told that the castle is surrounded with a couple of powerful dragons! 
@@ -14,7 +14,9 @@ Return "true" if yes, "false" otherwise.
     > Multiply the dragons' quantity by 2.
     > Comparate it with quantity of bullets. 
     > Verify if the quantity of bullets are equal or greater than the quantity of dragons. 
+*/
 
+/* RESOLUTION:
 We can solve that hero's problem using a function with a conditional:
 */
 function hero(bullets,dragons){                                                                
@@ -36,7 +38,7 @@ hero(14,7);
 console.log(hero(14,7));
 
 
-/* 2. Keep hydrated!
+/* 2. KEEP HYDRATED - CHALLENGE
 _________________________________________________________________
 Because Joe knows it is important to stay hydrated, 
 he drinks 0.5 litres of water per hour of cycling.
@@ -56,6 +58,9 @@ time = 11.8 -> litres = 5
 /* LOGICAL REASONING:
     > If 1 hour equals 0.5l, then 1h x 0.5l.
     > Round the number with the lowest value (if it is a fraction) and return.
+*/
+
+/* RESOLUTION:
 
 It's possible to solve that calculation with a function and the Math.floor method to
 round the to the smallest value:
@@ -65,3 +70,27 @@ function litres(time) {
   }
 
 console.log(litres(4.5));
+
+/* 3.REVERSE WORDS - CHALLENGE
+_________________________________________________________________
+Complete the solution so that it reverses all of the words within 
+the string passed in.
+Example:
+reverseWords("The greatest victory is that which requires no battle.")
+Should return "battle. no requires which that is victory greatest The"
+*/
+
+/* LOGICAL REASONING:
+    > Should to split, invert and join all the words in a statement.
+    > Return that statement with the result.
+*/
+
+/* RESOLUTION:
+We can solve that challenge using a function with the methods .split, .reverse and .join.
+*/
+function reverseWords(str){
+    return str.split(" ").reverse().join(" ");// reverse those words
+  };
+
+reverseWords("The greatest victory is that which requires no battle.");
+console.log(reverseWords("The greatest victory is that which requires no battle."));
