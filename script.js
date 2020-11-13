@@ -59,7 +59,7 @@ time = 11.8 -> litres = 5
 
 /* LOGICAL REASONING:
     > If 1 hour equals 0.5l, then 1h x 0.5l.
-    > Round the number with the lowest value (if it is a fraction) and return.
+    > Round the number with the lowest value (if it's a fraction) and return it.
 */
 
 /* RESOLUTION:
@@ -97,7 +97,7 @@ function reverseWords(str){
 reverseWords("The greatest victory is that which requires no battle.");
 console.log(reverseWords("The greatest victory is that which requires no battle."));
 
-/* RETURNING STRINGS - CHALLENGE
+/* 4. RETURNING STRINGS - CHALLENGE
 _________________________________________________________________
 Make a function that will return a greeting statement that uses an input. 
 Your program should return, "Hello, <name> how are you doing today?".
@@ -117,3 +117,26 @@ function greet(name){
   }
 greet("Fernando");
 console.log(greet("Fernando"));
+
+/* 5. YOU CAN'T CODE UNDER PRESSURE - CHALLENGE
+_________________________________________________________________
+Code as fast as you can! You need to double the integer and return it.
+*/
+
+/* LOGICAL REASONING:
+    > Just double the number mutiplying it by 2 and show it.
+*/
+
+/* RESOLUTION:
+A simple function that returns a multiplication of the number given
+can help us to solve that.
+*/
+
+function doubleInteger(i) {
+    return i*2;
+  };
+
+doubleInteger(10);
+console.log(doubleInteger(10));
+
+  /* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
