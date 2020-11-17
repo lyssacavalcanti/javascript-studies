@@ -182,7 +182,7 @@ Your task is to make 'Past' function which returns time converted to millisecond
     > Convert seconds in milliseconds: 1.000;
     > Convert minutes in milliseconds: 60.000;
     > Convert hours in milliseconds: 3.600.000;
-    > Retornar conversão s, m, h.
+    > Return convertion of s, m, h.
 */
 
 /* RESOLUTION:
@@ -196,5 +196,33 @@ function past(h, m, s){
     const minuto = 60000;
     const hora = 3600000;
     return ((s*segundo)+(m*minuto)+(h*hora))
-  };         
+  };
+  
+/* 8. GET THE MEAN OF AN ARRAY
+_________________________________________________________________
+It's the academic year's end, fateful moment of your school report. 
+The averages must be calculated. 
+All the students come to you and entreat you to calculate their average for them.
+Easy! You just need to write a script.
+Return the average of the given array rounded down to its nearest integer.
+The array will never be empty.
+*/
+
+/* LOGICAL REASONING:
+    > Use a function to make all the calculations;
+    > Must use reduce to iterate over an array and use the value of each item to create a final object.
+    > Divide the reduce's result to quantity of items of array.
+    > Use the method Math.floor to make the array rounded down to it nearest integer.
+    */
+
+/* RESOLUTION:
+Used the parameter called "marks" to symbol school's grade.
+Made the reduce method divided to the length method.
+Used the result above to rounded it to its nearest integer.
+*/
+
+function getAverage(marks){
+    return Math.floor(marks.reduce((sum,x)=> sum + x)/marks.length)
+   }
+  
 
