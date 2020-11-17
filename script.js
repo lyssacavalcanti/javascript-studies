@@ -221,8 +221,34 @@ Made the reduce method divided to the length method.
 Used the result above to rounded it to its nearest integer.
 */
 
-function getAverage(marks){
-    return Math.floor(marks.reduce((sum,x)=> sum + x)/marks.length)
-   }
-  
 
+/* 8. SET ALARM
+_________________________________________________________________
+Write a function named setAlarm which receives two parameters. 
+The first parameter, employed, is true whenever you are employed and the second parameter, 
+vacation is true whenever you are on vacation.
+
+The function should return true if you are employed and not on vacation (because these are the 
+circumstances under which you need to set an alarm). 
+It should return false otherwise. Examples:
+
+setAlarm(true, true) -> false
+setAlarm(false, true) -> false
+setAlarm(false, false) -> false
+setAlarm(true, false) -> true
+*/
+
+/* LOGICAL REASONING:
+    > Follow the instructions to set the alarm;
+    > Use Boolean to make the right results;
+    */
+
+/* RESOLUTION:
+Used the parameters "employed" and "vacation" to compose the function.
+Could used if/else inside the function to have the same result, but to trainning
+diferents ways to solve a problem and to make a shorter code, I decided to use 
+the ternary operator.
+*/
+   function setAlarm(employed, vacation){
+    return (employed && !vacation) ? true : false
+  }
