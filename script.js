@@ -166,9 +166,6 @@ multiply = function (a, b) {
 multiply(32,12);
 console.log(multiply(32,12));
 
-
-
-
   /* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
 
 /* 7. BEGINNER SERIES #CLOCK
@@ -197,7 +194,9 @@ function past(h, m, s){
     const hora = 3600000;
     return ((s*segundo)+(m*minuto)+(h*hora))
   };
-  
+  past(1, 1, 1);
+  console.log(past(10, 12, 16));
+
 /* 8. GET THE MEAN OF AN ARRAY
 _________________________________________________________________
 It's the academic year's end, fateful moment of your school report. 
@@ -220,7 +219,9 @@ Used the parameter called "marks" to symbol school's grade.
 Made the reduce method divided to the length method.
 Used the result above to rounded it to its nearest integer.
 */
-
+function getAverage(marks){
+  return Math.floor(marks.reduce((sum,x)=> sum + x)/marks.length)
+ }
 
 /* 8. SET ALARM
 _________________________________________________________________
@@ -252,3 +253,6 @@ the ternary operator.
    function setAlarm(employed, vacation){
     return (employed && !vacation) ? true : false
   }
+
+  setAlarm (true,false);
+  console.log(setAlarm(true,false));
