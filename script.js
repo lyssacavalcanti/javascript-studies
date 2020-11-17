@@ -170,3 +170,31 @@ console.log(multiply(32,12));
 
 
   /* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
+
+/* 7. BEGINNER SERIES #CLOCK
+_________________________________________________________________
+Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight.
+
+Your task is to make 'Past' function which returns time converted to milliseconds.
+*/
+
+/* LOGICAL REASONING:
+    > Convert seconds in milliseconds: 1.000;
+    > Convert minutes in milliseconds: 60.000;
+    > Convert hours in milliseconds: 3.600.000;
+    > Retornar conversão s, m, h.
+*/
+
+/* RESOLUTION:
+Inserted each type of time in one const and converted it in milliseconds.
+Used a multiplication of that convertion to sum with the others results.
+Showed it on return of the function. 
+*/
+
+function past(h, m, s){
+    const segundo = 1000;
+    const minuto = 60000;
+    const hora = 3600000;
+    return ((s*segundo)+(m*minuto)+(h*hora))
+  };         
+
