@@ -256,3 +256,50 @@ the ternary operator.
 
   setAlarm (true,false);
   console.log(setAlarm(true,false));
+
+  /* 8. HELLO, NAME OR WORLD!
+_________________________________________________________________
+WDefine a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+Examples:
+    hello "john"   => "Hello, John!"
+    hello "aliCE"  => "Hello, Alice!"
+    hello          => "Hello, World!" # name not given
+    hello ''       => "Hello, World!" # name is an empty String
+*/
+
+/* LOGICAL REASONING:
+    > Check if "name" has been defined:
+       If not: return "Hello World!"
+       If yes: return "Hello, 'name'!"
+     > First letter of "name" must be upercase in all cases;
+     > Subsequent letters must be lowercase in all cases.
+    */
+
+/* RESOLUTION:
+Used a compose of function with a if/else. Inside if/else, was checked if "name"was defined using the typeof method.
+Then, used the toUpperCase method to turn the first letter in uppercase, on the other hand used the toLowerCase method
+to turn all the others letters of string to lowercase.
+*/
+   
+   function hello(name) {
+    if (typeof name === undefined) {
+    return "Hello, World!";
+    } else {
+    return `Hello, ${name[0].toUpperCase()}${name.substring(1,).toLowerCase()}!`;
+  }
+};
+  
+  hello("SHELBY");
+  console.log(hello("SHELBY"));
+
+  hello("eMILY");
+  console.log(hello("eMILY"));
+
+  hello("enola");
+  console.log(hello("enola"));
+
+  hello("Harmon");
+  console.log(hello("Harmon"));
