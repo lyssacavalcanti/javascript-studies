@@ -257,9 +257,9 @@ the ternary operator.
   setAlarm (true,false);
   console.log(setAlarm(true,false));
 
-  /* 8. HELLO, NAME OR WORLD!
+  /* 9. HELLO, NAME OR WORLD!
 _________________________________________________________________
-WDefine a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
 Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 
@@ -303,3 +303,49 @@ to turn all the others letters of string to lowercase.
 
   hello("Harmon");
   console.log(hello("Harmon"));
+
+/* 10. ARRAY PLUS ARRAY
+  _________________________________________________________________
+I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. 
+I'll appreciate for your help.
+
+P.S. Each array includes only integer numbers. Output is a number too.
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1 + arr2; //something went wrong
+}
+
+Examples tests:
+  Test.describe("Basic tests",function(){
+  Test.assertEquals(arrayPlusArray([1, 2, 3], [4, 5, 6]), 21);
+  Test.assertEquals(arrayPlusArray([-1, -2, -3], [-4, -5, -6]), -21);
+  Test.assertEquals(arrayPlusArray([0, 0, 0], [4, 5, 6]), 15);
+  Test.assertEquals(arrayPlusArray([100, 200, 300], [400, 500, 600]), 2100);
+})
+*/
+
+/* LOGICAL REASONING:
+    > Sum all the elements of each array;
+    > Sum the results of each array;
+    > Return it as number output. 
+    */
+
+/* RESOLUTION:
+   A compose of function and the method reduce is enough to resolve that challenge.
+   Inside the function, the first step is reduce the arr1 to a single number, then do the same with arr2.
+   So, we can sum the results of two and return it on the function.  
+*/
+const numbersList = [1, 2, 3];
+const total = numbersList.reduce((total, currentElement) => total + currentElement)
+console.log(total);
+
+var arr1 = [1, 2, 3,];
+var arr2 = [4, 5, 6];
+
+function arrayPlusArray(arr1, arr2) {
+  return arr1.reduce ((total, currentElement) => total + currentElement) 
+  + arr2.reduce((total, currentElement) => total + currentElement); 
+}
+
+console.log(arrayPlusArray(arr1,arr2));
+
