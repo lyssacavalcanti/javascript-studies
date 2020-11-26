@@ -349,3 +349,41 @@ function arrayPlusArray(arr1, arr2) {
 
 console.log(arrayPlusArray(arr1,arr2));
 
+/* 10. MULTIPLICATION TABLE FOR NUMBER
+  _________________________________________________________________
+Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+
+For example, a multiplication table (string) for number == 5 looks like below:
+
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
+5 * 5 = 25
+6 * 5 = 30
+7 * 5 = 35
+8 * 5 = 40
+9 * 5 = 45
+10 * 5 = 50
+P. S. You can use \n in string to jump to the next line.
+*/
+
+/* LOGICAL REASONING:
+    > Separe each number present on the array [1,2,3,4,5,6,7,8,9,10];
+    > Multiply each number to the factor given;
+    > Return the result in string format like the example "1 * 5 = 5";
+    > Insert the \n to show each string resulted in a separeted line in the table.
+    */
+
+/* RESOLUTION:
+   First, the function was structured in ES6 format, so, the function was inserted in a const.
+   To separe each number, the .map method was used. The  results was indexed to transform it in a individual string.
+   At the last, the method .join made all the indexed informations as just one statement.
+   The element "\n" was implemented to make another line in the table.  
+*/
+
+  const multiTable = n => ([1,2,3,4,5,6,7,8,9,10].map(i=>`${i} * ${n} = ${i*n}`)).join('\n')
+
+  
+multiTable(5);
+console.log(multiTable(5));
