@@ -408,3 +408,33 @@ function squareNum (number) {
 
 squareNum(2);
 console.log(squareNum(2));
+
+/* 12. STRING REPEAT
+_________________________________________________________________
+Write a function called repeat_str which repeats the given string src exactly count times.
+    repeatStr(6, "I") // "IIIIII"
+    repeatStr(5, "Hello") // "HelloHelloHelloHelloHello" 
+*/
+
+/* LOGICAL REASONING:
+    > Repeat the string accord with the number given.
+    > Reduce -1 from number each time that the loop runs. 
+    */
+
+/* RESOLUTION:
+  A compose of function with a the while method helped to resolve it.
+  Inside the function, a let was created to receive the new string multiplied.
+  Then, the while method add a string to the let many times accord to argument number.
+  So, the function returns the let with the string repeated.
+*/
+
+function repeatStr(n, s) {
+  let repeatedString = "";
+  while (n > 0) {
+    repeatedString += s;
+    n --;
+  }
+  return repeatedString;
+}
+repeatStr(3,"abc");
+console.log(repeatStr(3,"abc"));
