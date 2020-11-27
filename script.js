@@ -383,7 +383,28 @@ P. S. You can use \n in string to jump to the next line.
 */
 
   const multiTable = n => ([1,2,3,4,5,6,7,8,9,10].map(i=>`${i} * ${n} = ${i*n}`)).join('\n')
-
   
 multiTable(5);
 console.log(multiTable(5));
+
+/* 11. SQUARING AN ARGUMENT
+_________________________________________________________________
+Now you have to write a function that takes an argument and returns the square of it.
+Test.assertEquals(square(3), 9);
+*/
+
+/* LOGICAL REASONING:
+    > Multiply the number for itself
+    > Return it
+    */
+
+/* RESOLUTION:
+   Used a simple function to make a square of a number, as the example bellow.  
+*/
+
+function squareNum (number) {
+  return number*number
+}
+
+squareNum(2);
+console.log(squareNum(2));
