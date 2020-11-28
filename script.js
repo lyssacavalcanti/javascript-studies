@@ -438,3 +438,51 @@ function repeatStr(n, s) {
 }
 repeatStr(3,"abc");
 console.log(repeatStr(3,"abc"));
+
+
+/* 13. BARTENDER, DRINKS!
+_________________________________________________________________
+Write a function getDrinkByProfession/get_drink_by_profession() that receives as input parameter a string, and produces outputs according to the following table:
+
+Input	Output
+"Jabroni"	"Patron Tequila"
+"School Counselor"	"Anything with Alcohol"
+ "Programmer"	 "Hipster Craft Beer"
+ "Bike Gang Member"	"Moonshine" 
+ "Politician"	"Your tax dollars" 
+ "Rapper"	"Cristal" 
+ *anything else*	"Beer" 
+*/
+
+/* LOGICAL REASONING:
+    > First, transform all the letters in the profession to lower case;
+    > Compare each profession and return the respective drink;
+    > Make a suggestion with bear if the profession is not listed in the examples.
+*/
+
+/* RESOLUTION:
+  A function composed with an if/else and the method toLowerCase() can
+  help us to solve that challenge.
+*/
+
+function getDrinkByProfession(param){
+  var input = param
+  if (input.toLowerCase() === "jabroni") {
+    return "Patron Tequila"
+  } else if (input.toLowerCase() === "school counselor") {
+    return "Anything with Alcohol"
+  } else if (input.toLowerCase() === "programmer") { 
+    return "Hipster Craft Beer"
+  } else if (input.toLowerCase() === "bike gang member") {
+    return "Moonshine"
+  } else if (input.toLowerCase() === "politician") {
+    return "Your tax dollars"
+  } else if (input.toLowerCase() === "rapper") {
+    return "Cristal"
+  } else {
+    return "Beer"
+  }
+};
+
+getDrinkByProfession("RAPPER");
+console.log(getDrinkByProfession("RAPPER"));
