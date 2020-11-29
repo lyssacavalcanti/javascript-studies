@@ -504,3 +504,76 @@ greet = () => {
   return "hello world!"}
 
 console.log(greet());
+
+
+/* /* 13. BARTENDER, DRINKS!
+_________________________________________________________________
+The function is not returning the correct values. Can you figure out why?
+
+getPlanetName(3); // should return 'Earth'
+
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury'
+    case 2:
+      name = 'Venus'
+    case 3:
+      name = 'Earth'
+    case 4:
+      name = 'Mars'
+    case 5:
+      name = 'Jupiter'
+    case 6:
+      name = 'Saturn'
+    case 7:
+      name = 'Uranus'
+    case 8:
+      name = 'Neptune'
+  }
+  
+  return name;
+}
+*/
+
+/* RESOLUTION:
+  In that case, a function composed with a switch case was broken, beacuse wasn't returning the right answer according
+  the input id. The very first thing is analyze the code and understand what's wrong.
+  The debbuging was pretty fast because I notice that all the breaks was missed, so, as long as the code runned,
+  just the last name was returned, beacuse the there wasn't how read and return it on the right answer.
+*/
+*/
+
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury'
+      break;
+    case 2:
+      name = 'Venus'
+      break;
+    case 3:
+      name = 'Earth'
+      break;
+    case 4:
+      name = 'Mars'
+      break;
+    case 5:
+      name = 'Jupiter'
+      break;
+    case 6:
+      name = 'Saturn'
+      break;
+    case 7:
+      name = 'Uranus'
+      break;
+    case 8:
+      name = 'Neptune'
+  }
+  
+  return name;
+}
+
+console.log(getPlanetName(3));
