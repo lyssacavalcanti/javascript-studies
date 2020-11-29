@@ -486,3 +486,21 @@ function getDrinkByProfession(param){
 
 getDrinkByProfession("RAPPER");
 console.log(getDrinkByProfession("RAPPER"));
+
+/* 14. FUNCTION 1 - HELLO WORLD!
+_________________________________________________________________
+Make a simple function called greet that returns the most-famous "hello world!".
+Style Points
+Sure, this is about as easy as it gets. 
+But how clever can you be to create the most creative hello world you can think of? 
+What is a "hello world" solution you would want to show your friends?
+*/
+
+/* RESOLUTION:
+  Used that challenge to trains some ES6 skills with a short arrow function.
+*/
+
+greet = () => {
+  return "hello world!"}
+
+console.log(greet());
