@@ -643,6 +643,34 @@ function noSpace(x){
  return x.replace(/\s/g, '');
 }
 
-console.log(noSpace("Re mo va  tod os os es pa ços ."));
+console.log(noSpace("Re m o v a  t od os os es pa ços ."));
 
+/* SUM OF POSITIVE
+_________________________________________________________________
 
+You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+*/
+
+/* RESOLUTION:
+  Inside the function, I used the method for to setup loop to go through array of the lenght given.
+  Then, the method if arr[i] checks if it's greater than zero and finally, add arr total.
+*/
+
+var arr4 = [1,-4,7,12];
+
+function positiveSum (arr) {
+  var sum = 0
+  var arr = arr4
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+console.log(positiveSum()); //20
