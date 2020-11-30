@@ -506,7 +506,7 @@ greet = () => {
 console.log(greet());
 
 
-/* /* 13. BARTENDER, DRINKS!
+/* 15 GETPLANETNAME BY ID!
 _________________________________________________________________
 The function is not returning the correct values. Can you figure out why?
 
@@ -543,7 +543,7 @@ function getPlanetName(id){
   The debbuging was pretty fast because I notice that all the breaks was missed, so, as long as the code runned,
   just the last name was returned, beacuse the there wasn't how read and return it on the right answer.
 */
-*/
+
 
 function getPlanetName(id){
   var name;
@@ -577,3 +577,25 @@ function getPlanetName(id){
 }
 
 console.log(getPlanetName(3));
+
+/* 16. YOU ONLY NEED ONE - BEGINNER
+_________________________________________________________________
+You will be given an array a and a value x. 
+All you need to do is check whether the provided array contains the value.
+Array can contain numbers or strings. X can be either.
+Return true if the array contains the value, false if not.
+*/
+
+/* RESOLUTION:
+  At first, I tried to solve that challenge with an default if/else.
+  But had an idea to research about different ways to solve it and found 
+  the method .includes(), that works like a Boolean to check and return if 
+  it's true or false.
+*/
+
+var nomes = ['Matheus', 'Henrique', 'João', 'Pedro'];
+function check(nomes, x) {
+  return nomes.includes(x);
+}
+console.log(check(nomes,'Fernando'));
+
