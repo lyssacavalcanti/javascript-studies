@@ -599,3 +599,25 @@ function check(nomes, x) {
 }
 console.log(check(nomes,'Fernando'));
 
+/* 17. OPPOSITE NUMBER
+_________________________________________________________________
+Very simple, given a number, find its opposite.
+
+Examples:
+
+1: -1
+14: -14
+-34: 34
+*/
+
+/* RESOLUTION:
+  That challenge serves to train the logical reasoning, so at first attempt
+  I made solution with a function that makes a multiplication of number by 2, and then,
+  substract from the number given.
+*/
+
+function opposite(number) {
+  return (number - (number*2))
+}
+
+console.log(opposite(-50));
