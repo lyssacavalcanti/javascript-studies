@@ -223,7 +223,7 @@ function getAverage(marks){
   return Math.floor(marks.reduce((sum,x)=> sum + x)/marks.length)
  }
 
-/* 8. SET ALARM
+/* 9. SET ALARM
 _________________________________________________________________
 Write a function named setAlarm which receives two parameters. 
 The first parameter, employed, is true whenever you are employed and the second parameter, 
@@ -257,7 +257,7 @@ the ternary operator.
   setAlarm (true,false);
   console.log(setAlarm(true,false));
 
-  /* 9. HELLO, NAME OR WORLD!
+  /* 10. HELLO, NAME OR WORLD!
 _________________________________________________________________
 Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
@@ -304,7 +304,7 @@ to turn all the others letters of string to lowercase.
   hello("Harmon");
   console.log(hello("Harmon"));
 
-/* 10. ARRAY PLUS ARRAY
+/* 11. ARRAY PLUS ARRAY
   _________________________________________________________________
 I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. 
 I'll appreciate for your help.
@@ -349,7 +349,7 @@ function arrayPlusArray(arr1, arr2) {
 
 console.log(arrayPlusArray(arr1,arr2));
 
-/* 10. MULTIPLICATION TABLE FOR NUMBER
+/* 12. MULTIPLICATION TABLE FOR NUMBER
   _________________________________________________________________
 Your goal is to return multiplication table for number that is always an integer from 1 to 10.
 
@@ -387,7 +387,7 @@ P. S. You can use \n in string to jump to the next line.
 multiTable(5);
 console.log(multiTable(5));
 
-/* 11. SQUARING AN ARGUMENT
+/* 13. SQUARING AN ARGUMENT
 _________________________________________________________________
 Now you have to write a function that takes an argument and returns the square of it.
 Test.assertEquals(square(3), 9);
@@ -409,7 +409,7 @@ function squareNum (number) {
 squareNum(2);
 console.log(squareNum(2));
 
-/* 12. STRING REPEAT
+/* 14. STRING REPEAT
 _________________________________________________________________
 Write a function called repeat_str which repeats the given string src exactly count times.
     repeatStr(6, "I") // "IIIIII"
@@ -440,7 +440,7 @@ repeatStr(3,"abc");
 console.log(repeatStr(3,"abc"));
 
 
-/* 13. BARTENDER, DRINKS!
+/* 15. BARTENDER, DRINKS!
 _________________________________________________________________
 Write a function getDrinkByProfession/get_drink_by_profession() that receives as input parameter a string, and produces outputs according to the following table:
 
@@ -487,7 +487,7 @@ function getDrinkByProfession(param){
 getDrinkByProfession("RAPPER");
 console.log(getDrinkByProfession("RAPPER"));
 
-/* 14. FUNCTION 1 - HELLO WORLD!
+/* 16. FUNCTION 1 - HELLO WORLD!
 _________________________________________________________________
 Make a simple function called greet that returns the most-famous "hello world!".
 Style Points
@@ -506,7 +506,7 @@ greet = () => {
 console.log(greet());
 
 
-/* 15 GETPLANETNAME BY ID!
+/* 17. GETPLANETNAME BY ID!
 _________________________________________________________________
 The function is not returning the correct values. Can you figure out why?
 
@@ -578,7 +578,7 @@ function getPlanetName(id){
 
 console.log(getPlanetName(3));
 
-/* 16. YOU ONLY NEED ONE - BEGINNER
+/* 18. YOU ONLY NEED ONE - BEGINNER
 _________________________________________________________________
 You will be given an array a and a value x. 
 All you need to do is check whether the provided array contains the value.
@@ -599,7 +599,7 @@ function check(nomes, x) {
 }
 console.log(check(nomes,'Fernando'));
 
-/* 17. OPPOSITE NUMBER
+/* 19. OPPOSITE NUMBER
 _________________________________________________________________
 Very simple, given a number, find its opposite.
 
@@ -622,7 +622,7 @@ function opposite(number) {
 
 console.log(opposite(-50));
 
-/* 18. REMOVE STRING SPACE
+/* 20. REMOVE STRING SPACE
 _________________________________________________________________
 Simple, remove the spaces from the string, then return the resultant string.
 
@@ -645,7 +645,7 @@ function noSpace(x){
 
 console.log(noSpace("Re m o v a  t od os os es pa ços ."));
 
-/* SUM OF POSITIVE
+/* 21. SUM OF POSITIVE
 _________________________________________________________________
 
 You get an array of numbers, return the sum of all of the positives ones.
@@ -676,7 +676,7 @@ function positiveSum (arr) {
 console.log(positiveSum()); //20
 
 
-/* BEGINNER SERIES #1 SCHOOL PAPAERWORK
+/* 22. BEGINNER SERIES #1 SCHOOL PAPERWORK
 _________________________________________________________________
 
 Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
@@ -702,3 +702,31 @@ paperwork = (n, m) => {
   }
 }
 console.log(paperwork(2, -5));
+
+/* 23. BEGINNER SERIES #1 SCHOOL PAPERWORK
+_________________________________________________________________
+
+You were camping with your friends far away from home, but when it's time to go back, 
+you realize that your fuel is running out and the nearest pump is 50 miles away! 
+You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. 
+Considering these factors, write a function that tells you if it is possible to get to the pump or not. 
+Function should return true (1 in Prolog) if it is possible and false (0 in Prolog) if not. 
+The input values are always positive.
+*/
+
+/* RESOLUTION:
+  First, used a simple equation to calculate if was possible arrive the pump just using the quantity of fuel left.
+  Then, used that result information to check if it was true or false and return it.  
+*/
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  const pumpOrNot = ((mpg * fuelLeft) / distanceToPump)
+  if (pumpOrNot >= 1) {
+    return true
+  } else {
+    return false
+  }
+
+}
+
+console.log(zeroFuel(50, 25, 2));
