@@ -703,7 +703,7 @@ paperwork = (n, m) => {
 }
 console.log(paperwork(2, -5));
 
-/* 23. BEGINNER SERIES #1 SCHOOL PAPERWORK
+/* 23. WILL YOU MAKE IT?
 _________________________________________________________________
 
 You were camping with your friends far away from home, but when it's time to go back, 
@@ -730,3 +730,21 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 }
 
 console.log(zeroFuel(50, 25, 2));
+
+/* 24. SIMPLE MULTIPLICATION
+_________________________________________________________________
+  This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+*/
+
+/* RESOLUTION:
+  This challenge was resolved with the modules method in a if/else and a function.
+*/
+
+function simpleMultiplication(number) {
+  if ((number % 2) === 0) { 
+    return number * 8
+  } else {
+    return number * 9
+  }
+}
+console.log(simpleMultiplication(2));ß
