@@ -813,3 +813,19 @@ console.log(numberToPower(2,3));
 console.log(numberToPower(10,6));
 console.log(numberToPower(4,10));
 console.log(numberToPower(3,9));
+
+/* 27. VOWEL REMOVER
+_________________________________________________________________
+Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+Examples
+shortcut("codewars") // --> cdwrs
+shortcut("goodbye")  // --> gdby
+Don't worry about uppercase vowels.
+*/
+
+function shortcut (string) {
+  return string.replace(/[aeiou]/gi,'')
+}
+
+console.log(shortcut('asbmzxogtIf you act fast, you too can be part of the anti-duplication squad - send in your membership now!'))
