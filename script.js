@@ -830,7 +830,7 @@ function shortcut (string) {
 
 console.log(shortcut('asbmzxogtIf you act fast, you too can be part of the anti-duplication squad - send in your membership now!'))
 
-/*28. Calling a Function inside another function
+/*28. Calling a Function Inside Another Function
 A Fruit processor only works well if the fruits be cutted. Create a function of fruit processor
 that call another function that cut all fruits in pieces, inside it.
 */ 
@@ -847,5 +847,14 @@ const fruitProcessor = function (apples, oranges) {
 	pieces of 🍊.`;
   return juice;
 }
-
 console.log(fruitProcessor(2,3));
+
+/* 29. Concatenating 2 Arrays
+Use the method .concat to join the two arrays given: array1 and array2.
+*/ 
+
+const array1 = ['a', 'b', 'c']
+const array2 = ['d', 'e', 'f']
+const array3 = array1.concat(array2);
+
+console.log(array3);
