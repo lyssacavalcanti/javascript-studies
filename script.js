@@ -829,3 +829,23 @@ function shortcut (string) {
 }
 
 console.log(shortcut('asbmzxogtIf you act fast, you too can be part of the anti-duplication squad - send in your membership now!'))
+
+/*28. Calling a Function inside another function
+A Fruit processor only works well if the fruits be cutted. Create a function of fruit processor
+that call another function that cut all fruits in pieces, inside it.
+*/ 
+
+const cutPieces = function (fruit) {
+  return fruit * 4;
+};
+
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+
+  const juice = `Juice with ${applePieces} piece of 🍎 and ${orangePieces} 
+	pieces of 🍊.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2,3));
