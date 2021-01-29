@@ -858,3 +858,18 @@ const array2 = ['d', 'e', 'f']
 const array3 = array1.concat(array2);
 
 console.log(array3);
+
+/* 30. CONVERT A BOOLEAN TO A STRING
+_________________________________________________________________
+Implement a function which convert the given boolean value into its string representation.
+
+Sample tests:
+Test.assertEquals(booleanToString(true), "true", 'When we pass in true, we want the string "true" as output');
+Test.assertEquals(booleanToString(false), "false", 'When we pass in false, we want the string "false" as output');
+*/ 
+
+function booleanToString(b){
+  return b.toString()
+}
+
+console.log(booleanToString(true));
