@@ -1,3 +1,10 @@
+/* Big Javascript Cheat Sheet
+_________________________________________________________________
+*/
+
+
+
+
 
 /* 1. HERO'S BULLET - CHALLENGE
 _________________________________________________________________
@@ -935,3 +942,29 @@ it("example tests", function() {
  };
 
  console.log(solve(10,2));
+
+ /* 33. MY HEAD IS AT THE WRONG END!
+_________________________________________________________________
+You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+
+Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics
+
+SAMPLE TESTS
+Test.describe("Basic tests",_=>{
+Test.assertSimilar(fixTheMeerkat(["tail", "body", "head"]), ["head", "body", "tail"]);
+Test.assertSimilar(fixTheMeerkat(["tails", "body", "heads"]), ["heads", "body", "tails"]);
+Test.assertSimilar(fixTheMeerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"]);
+Test.assertSimilar(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
+Test.assertSimilar(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
+})
+*/ 
+
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+ }
+ 
+ let arr = ["bottom", "middle", "top"]
+
+ console.log(fixTheMeerkat(arr));
