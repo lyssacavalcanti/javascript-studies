@@ -1033,3 +1033,11 @@ var result = 'Even';
 };
 
 console.log(even_or_odd(7));
+
+// Previous code refactored.
+
+function even_or_odd_(number) {
+  return (number % 2 === 0) ? 'Even' : 'Odd'
+  };
+  
+  console.log(even_or_odd_(3));
