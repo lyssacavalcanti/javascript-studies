@@ -1011,3 +1011,25 @@ function lowercaseCount(str){
 }
 
 console.log(lowercaseCount(str));
+
+
+/* 36. EVEN OR ODD
+Crie uma função (ou escreva um script no Shell) que recebe um inteiro como argumento 
+e retorna "Par" para números pares ou "Ímpar" para números ímpares.
+
+SAMPLE TESTS:
+Test.assertEquals(even_or_odd(2), "Even")
+Test.assertEquals(even_or_odd(0), "Even")
+Test.assertEquals(even_or_odd(7), "Odd")
+Test.assertEquals(even_or_odd(1), "Odd")
+*/
+
+function even_or_odd(number) {
+if (number % 2 === 0) {
+var result = 'Even';
+} else {
+ result = 'Odd'
+} return result;
+};
+
+console.log(even_or_odd(7));
