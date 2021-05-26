@@ -27,24 +27,24 @@ Return "true" if yes, "false" otherwise.
 We can solve that hero's problem using a function with a conditional:
 */
 
-function hero(bullets,dragons){                                                                
-    if (bullets >= (dragons * 2)){
-        return  true;
-    } else {
-        return  false;
-    }
-   };
-hero(14,7);
-console.log(hero(14,7));
+function hero(bullets, dragons) {
+  if (bullets >= (dragons * 2)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+hero(14, 7);
+console.log(hero(14, 7));
 
 /* Discovered another way to solve the hero's problem using 
 a shorter and best practice function.*/
 
-function hero(bullets, dragons){
-    return bullets >= dragons * 2
-  }
-hero(14,7);
-console.log(hero(14,7));
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2
+}
+hero(14, 7);
+console.log(hero(14, 7));
 
 
 /* 2. KEEP HYDRATED - CHALLENGE
@@ -75,8 +75,8 @@ It's possible to solve that calculation with a function and the Math.floor metho
 round the to the smallest value:
 */
 function litres(time) {
-    return (Math.floor(time * 0.5))
-  }
+  return (Math.floor(time * 0.5))
+}
 
 console.log(litres(4.5));
 
@@ -97,9 +97,9 @@ Should return "battle. no requires which that is victory greatest The"
 /* RESOLUTION:
 We can solve that challenge using a function with the methods .split, .reverse and .join.
 */
-function reverseWords(str){
-    return str.split(" ").reverse().join(" ");// reverse those words
-  };
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");// reverse those words
+};
 
 reverseWords("The greatest victory is that which requires no battle.");
 console.log(reverseWords("The greatest victory is that which requires no battle."));
@@ -119,9 +119,9 @@ Make sure you type the exact thing I wrote or the program may not execute proper
 /* RESOLUTION:
 That challenge can be solved using a function indexing a name in ES6 format.
 */
-function greet(name){
-    return `Hello, ${name}! How are you doing today?`
-  }
+function greet(name) {
+  return `Hello, ${name}! How are you doing today?`
+}
 greet("Fernando");
 console.log(greet("Fernando"));
 
@@ -140,8 +140,8 @@ can help us to solve that.
 */
 
 function doubleInteger(i) {
-    return i*2;
-  };
+  return i * 2;
+};
 
 doubleInteger(10);
 console.log(doubleInteger(10));
@@ -168,12 +168,12 @@ missing on the function given.
 */
 
 multiply = function (a, b) {
-    return a * b;
-  }
-multiply(32,12);
-console.log(multiply(32,12));
+  return a * b;
+}
+multiply(32, 12);
+console.log(multiply(32, 12));
 
-  /* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
+/* All the challenges came from sources: Code Wars, SoloLearn, FreeCodeCamp and others.*/
 
 /* 7. BEGINNER SERIES #CLOCK
 _________________________________________________________________
@@ -195,14 +195,14 @@ Used a multiplication of that convertion to sum with the others results.
 Showed it on return of the function. 
 */
 
-function past(h, m, s){
-    const segundo = 1000;
-    const minuto = 60000;
-    const hora = 3600000;
-    return ((s*segundo)+(m*minuto)+(h*hora))
-  };
-  past(1, 1, 1);
-  console.log(past(10, 12, 16));
+function past(h, m, s) {
+  const segundo = 1000;
+  const minuto = 60000;
+  const hora = 3600000;
+  return ((s * segundo) + (m * minuto) + (h * hora))
+};
+past(1, 1, 1);
+console.log(past(10, 12, 16));
 
 /* 8. GET THE MEAN OF AN ARRAY
 _________________________________________________________________
@@ -226,9 +226,9 @@ Used the parameter called "marks" to symbol school's grade.
 Made the reduce method divided to the length method.
 Used the result above to rounded it to its nearest integer.
 */
-function getAverage(marks){
-  return Math.floor(marks.reduce((sum,x)=> sum + x)/marks.length)
- }
+function getAverage(marks) {
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length)
+}
 
 /* 9. SET ALARM
 _________________________________________________________________
@@ -257,24 +257,24 @@ Could used if/else inside the function to have the same result, but to trainning
 diferents ways to solve a problem and to make a shorter code, I decided to use 
 the ternary operator.
 */
-   function setAlarm(employed, vacation){
-    return (employed && !vacation) ? true : false
-  }
+function setAlarm(employed, vacation) {
+  return (employed && !vacation) ? true : false
+}
 
-  setAlarm (true,false);
-  console.log(setAlarm(true,false));
+setAlarm(true, false);
+console.log(setAlarm(true, false));
 
-  /* 10. HELLO, NAME OR WORLD!
+/* 10. HELLO, NAME OR WORLD!
 _________________________________________________________________
 Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
 Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 
 Examples:
-    hello "john"   => "Hello, John!"
-    hello "aliCE"  => "Hello, Alice!"
-    hello          => "Hello, World!" # name not given
-    hello ''       => "Hello, World!" # name is an empty String
+  hello "john"   => "Hello, John!"
+  hello "aliCE"  => "Hello, Alice!"
+  hello          => "Hello, World!" # name not given
+  hello ''       => "Hello, World!" # name is an empty String
 */
 
 /* LOGICAL REASONING:
@@ -290,26 +290,26 @@ Used a compose of function with a if/else. Inside if/else, was checked if "name"
 Then, used the toUpperCase method to turn the first letter in uppercase, on the other hand used the toLowerCase method
 to turn all the others letters of string to lowercase.
 */
-   
-   function hello(name) {
-    if (typeof name === undefined) {
+
+function hello(name) {
+  if (typeof name === undefined) {
     return "Hello, World!";
-    } else {
+  } else {
     return `Hello, ${name[0].toUpperCase()}${name.substring(1,).toLowerCase()}!`;
   }
 };
-  
-  hello("SHELBY");
-  console.log(hello("SHELBY"));
 
-  hello("eMILY");
-  console.log(hello("eMILY"));
+hello("SHELBY");
+console.log(hello("SHELBY"));
 
-  hello("enola");
-  console.log(hello("enola"));
+hello("eMILY");
+console.log(hello("eMILY"));
 
-  hello("Harmon");
-  console.log(hello("Harmon"));
+hello("enola");
+console.log(hello("enola"));
+
+hello("Harmon");
+console.log(hello("Harmon"));
 
 /* 11. ARRAY PLUS ARRAY
   _________________________________________________________________
@@ -350,11 +350,11 @@ var arr1 = [1, 2, 3,];
 var arr2 = [4, 5, 6];
 
 function arrayPlusArray(arr1, arr2) {
-  return arr1.reduce ((total, currentElement) => total + currentElement) 
-  + arr2.reduce((total, currentElement) => total + currentElement); 
+  return arr1.reduce((total, currentElement) => total + currentElement)
+    + arr2.reduce((total, currentElement) => total + currentElement);
 }
 
-console.log(arrayPlusArray(arr1,arr2));
+console.log(arrayPlusArray(arr1, arr2));
 
 /* 12. MULTIPLICATION TABLE FOR NUMBER
   _________________________________________________________________
@@ -389,8 +389,8 @@ P. S. You can use \n in string to jump to the next line.
    The element "\n" was implemented to make another line in the table.  
 */
 
-  const multiTable = n => ([1,2,3,4,5,6,7,8,9,10].map(i=>`${i} * ${n} = ${i*n}`)).join('\n')
-  
+const multiTable = n => ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => `${i} * ${n} = ${i * n}`)).join('\n')
+
 multiTable(5);
 console.log(multiTable(5));
 
@@ -409,8 +409,8 @@ Test.assertEquals(square(3), 9);
    Used a simple function to make a square of a number, as the example bellow.  
 */
 
-function squareNum (number) {
-  return number*number
+function squareNum(number) {
+  return number * number
 }
 
 squareNum(2);
@@ -439,12 +439,12 @@ function repeatStr(n, s) {
   let repeatedString = "";
   while (n > 0) {
     repeatedString += s;
-    n --;
+    n--;
   }
   return repeatedString;
 }
-repeatStr(3,"abc");
-console.log(repeatStr(3,"abc"));
+repeatStr(3, "abc");
+console.log(repeatStr(3, "abc"));
 
 
 /* 15. BARTENDER, DRINKS!
@@ -472,13 +472,13 @@ Input	Output
   help us to solve that challenge.
 */
 
-function getDrinkByProfession(param){
+function getDrinkByProfession(param) {
   var input = param
   if (input.toLowerCase() === "jabroni") {
     return "Patron Tequila"
   } else if (input.toLowerCase() === "school counselor") {
     return "Anything with Alcohol"
-  } else if (input.toLowerCase() === "programmer") { 
+  } else if (input.toLowerCase() === "programmer") {
     return "Hipster Craft Beer"
   } else if (input.toLowerCase() === "bike gang member") {
     return "Moonshine"
@@ -508,7 +508,8 @@ What is a "hello world" solution you would want to show your friends?
 */
 
 greet = () => {
-  return "hello world!"}
+  return "hello world!"
+}
 
 console.log(greet());
 
@@ -552,9 +553,9 @@ function getPlanetName(id){
 */
 
 
-function getPlanetName(id){
+function getPlanetName(id) {
   var name;
-  switch(id){
+  switch (id) {
     case 1:
       name = 'Mercury'
       break;
@@ -579,7 +580,7 @@ function getPlanetName(id){
     case 8:
       name = 'Neptune'
   }
-  
+
   return name;
 }
 
@@ -604,7 +605,7 @@ var nomes = ['Matheus', 'Henrique', 'João', 'Pedro'];
 function check(nomes, x) {
   return nomes.includes(x);
 }
-console.log(check(nomes,'Fernando'));
+console.log(check(nomes, 'Fernando'));
 
 /* 19. OPPOSITE NUMBER
 _________________________________________________________________
@@ -624,7 +625,7 @@ Examples:
 */
 
 function opposite(number) {
-  return (number - (number*2))
+  return (number - (number * 2))
 }
 
 console.log(opposite(-50));
@@ -646,8 +647,8 @@ Test.assertEquals(noSpace('8aaaaa dddd r     '), '8aaaaaddddr');
   that envolves Regex (that was the very first time that I coded a Regex solution). 
 */
 
-function noSpace(x){
- return x.replace(/\s/g, '');
+function noSpace(x) {
+  return x.replace(/\s/g, '');
 }
 
 console.log(noSpace("Re m o v a  t od os os es pa ços ."));
@@ -667,9 +668,9 @@ Note: if there is nothing to sum, the sum is default to 0.
   Then, the method if arr[i] checks if it's greater than zero and finally, add arr total.
 */
 
-var arr4 = [1,-4,7,12];
+var arr4 = [1, -4, 7, 12];
 
-function positiveSum (arr) {
+function positiveSum(arr) {
   var sum = 0
   var arr = arr4
   for (var i = 0; i < arr.length; i++) {
@@ -704,7 +705,7 @@ Note: if n < 0 or m < 0 return 0!
 paperwork = (n, m) => {
   if (n > 0 && m > 0) {
     return n * m
-  } else { 
+  } else {
     return 0
   }
 }
@@ -748,7 +749,7 @@ _________________________________________________________________
 */
 
 function simpleMultiplication(number) {
-  if ((number % 2) === 0) { 
+  if ((number % 2) === 0) {
     return number * 8
   } else {
     return number * 9
@@ -779,17 +780,17 @@ The overall difference of the modified code is less than 5 characters.
 
 function makePizza(pieces) { //Let's make n pieces of Pizza ;-)
   var result = "";
-  while ( pieces-- ){
+  while (pieces--) {
     var needSteps = 5;
-    while ( needSteps-- ) result += make( needSteps );
+    while (needSteps--) result += make(needSteps);
   }
   return result;
 }
-function make(step){
-  switch (step+1){
+function make(step) {
+  switch (step + 1) {
     case 5: return "P";
     case 4: return "i";
-    case 3: 
+    case 3:
     case 2: return "z";
     case 1: return "a";
   }
@@ -815,11 +816,11 @@ function numberToPower(number, power) {
   return total;
 };
 
-console.log(numberToPower(3,2));
-console.log(numberToPower(2,3));
-console.log(numberToPower(10,6));
-console.log(numberToPower(4,10));
-console.log(numberToPower(3,9));
+console.log(numberToPower(3, 2));
+console.log(numberToPower(2, 3));
+console.log(numberToPower(10, 6));
+console.log(numberToPower(4, 10));
+console.log(numberToPower(3, 9));
 
 /* 27. VOWEL REMOVER
 _________________________________________________________________
@@ -831,8 +832,8 @@ shortcut("goodbye")  // --> gdby
 Don't worry about uppercase vowels.
 */
 
-function shortcut (string) {
-  return string.replace(/[aeiou]/gi,'')
+function shortcut(string) {
+  return string.replace(/[aeiou]/gi, '')
 }
 
 console.log(shortcut('asbmzxogtIf you act fast, you too can be part of the anti-duplication squad - send in your membership now!'))
@@ -840,7 +841,7 @@ console.log(shortcut('asbmzxogtIf you act fast, you too can be part of the anti-
 /*28. Calling a Function Inside Another Function
 A Fruit processor only works well if the fruits be cutted. Create a function of fruit processor
 that call another function that cut all fruits in pieces, inside it.
-*/ 
+*/
 
 const cutPieces = function (fruit) {
   return fruit * 4;
@@ -854,11 +855,11 @@ const fruitProcessor = function (apples, oranges) {
 	pieces of 🍊.`;
   return juice;
 }
-console.log(fruitProcessor(2,3));
+console.log(fruitProcessor(2, 3));
 
 /* 29. Concatenating 2 Arrays
 Use the method .concat to join the two arrays given: array1 and array2.
-*/ 
+*/
 
 const array1 = ['a', 'b', 'c']
 const array2 = ['d', 'e', 'f']
@@ -873,9 +874,9 @@ Implement a function which convert the given boolean value into its string repre
 Sample tests:
 Test.assertEquals(booleanToString(true), "true", 'When we pass in true, we want the string "true" as output');
 Test.assertEquals(booleanToString(false), "false", 'When we pass in false, we want the string "false" as output');
-*/ 
+*/
 
-function booleanToString(b){
+function booleanToString(b) {
   return b.toString()
 }
 
@@ -902,7 +903,7 @@ Test.assertEquals(bonusTime(2, true), '£20');
 Test.assertEquals(bonusTime(78, false), '£78');
 Test.assertEquals(bonusTime(67890, true), '£678900');
 })
-*/ 
+*/
 
 function bonusTime(salary, bonus) {
   if (bonus === true) {
@@ -911,10 +912,10 @@ function bonusTime(salary, bonus) {
     salary
   }
   return `£${salary}`
- }
+}
 
- console.log(bonusTime(10000,true));
- console.log(bonusTime(78,false));
+console.log(bonusTime(10000, true));
+console.log(bonusTime(78, false));
 
 /* 32. INCORRECT DIVISION METHOD
 _________________________________________________________________
@@ -935,15 +936,15 @@ it("example tests", function() {
   assert.strictEqual(solve(4.2, 1), 4.2);
   assert.strictEqual(solve(9999, 11), 909);
 });
-*/ 
+*/
 
- const solve = (x, y) => {
+const solve = (x, y) => {
   return x / y;
- };
+};
 
- console.log(solve(10,2));
+console.log(solve(10, 2));
 
- /* 33. MY HEAD IS AT THE WRONG END!
+/* 33. MY HEAD IS AT THE WRONG END!
 _________________________________________________________________
 You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
 
@@ -959,34 +960,34 @@ Test.assertSimilar(fixTheMeerkat(["bottom", "middle", "top"]), ["top", "middle",
 Test.assertSimilar(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
 Test.assertSimilar(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
 })
-*/ 
+*/
 
 function fixTheMeerkat(arr) {
   return arr.reverse()
- }
+}
 
- let arr = ["bottom", "middle", "top"]
+let arr = ["bottom", "middle", "top"]
 
- console.log(fixTheMeerkat(arr));
+console.log(fixTheMeerkat(arr));
 
- /* 34. SUM THE STRINGS
+/* 34. SUM THE STRINGS
 _________________________________________________________________
 Create a function that takes 2 positive integers in form of a string as an input, and outputs the sum (also as a string):
 
-  sumStr("4", "5")    // should output "9"
-  sumStr("34", "5")   // should output "39"
+ sumStr("4", "5")    // should output "9"
+ sumStr("34", "5")   // should output "39"
 If either input is an empty string, consider it as zero.
 
 SAMPLE TESTS:
 Test.assertEquals(sumStr("4","5"), "9");
 Test.assertEquals(sumStr("34","5"), "39");
-*/ 
+*/
 
-function sumStr(a,b) {
-  return String(Number(a)+Number(b));
+function sumStr(a, b) {
+  return String(Number(a) + Number(b));
 }
 
-console.log(sumStr('0','5'));
+console.log(sumStr('0', '5'));
 
 /* 35. REGEX COUNT LOWERCASE LETTERS
 Your task is simply to count the total number of lowercase letters in a string.
@@ -1006,7 +1007,7 @@ lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26
 */
 
 const str = 'abcdefghijABCDE';
-function lowercaseCount(str){
+function lowercaseCount(str) {
   return (str.match(/[a-z]/g) || []).length;
 }
 
@@ -1025,11 +1026,11 @@ Test.assertEquals(even_or_odd(1), "Odd")
 */
 
 function even_or_odd(number) {
-if (number % 2 === 0) {
-var result = 'Even';
-} else {
- result = 'Odd'
-} return result;
+  if (number % 2 === 0) {
+    var result = 'Even';
+  } else {
+    result = 'Odd'
+  } return result;
 };
 
 console.log(even_or_odd(7));
@@ -1038,9 +1039,9 @@ console.log(even_or_odd(7));
 
 function even_or_odd_(number) {
   return (number % 2 === 0) ? 'Even' : 'Odd'
-  };
-  
-  console.log(even_or_odd_(3));
+};
+
+console.log(even_or_odd_(3));
 
 /* 37.BEGINNER - LOST WITHOUT A MAP
 Given an array of integers, return a new array with each value doubled.
@@ -1052,7 +1053,7 @@ For example:
 For the beginner, try to use the map method - it comes in very handy quite a lot so is a good one to know.
 */
 
-function maps(x){
+function maps(x) {
   return x.map(n => n * 2);
 }
 
@@ -1072,7 +1073,29 @@ centuryFromYear(2000)  returns (20)
 */
 
 function century(year) {
-  return Math.ceil(year/100);
+  return Math.ceil(year / 100);
 }
 
 console.log(century(1900));
+
+
+/* 38. REMOVE EXCLAMATION MARKS
+Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+SAMPLE TESTS: 
+    describe("Tests", () => {
+    it("test", () => {
+    Test.assertSimilar(removeExclamationMarks("Hello World!"), "Hello World");
+    });
+    });
+*/
+
+function removeExclamationMarks(s) {
+  return s.replace(/!+$/, '');
+}
+
+console.log(removeExclamationMarks('Hello!'));
+
+/* RESOLUTION
+Used a syntax for Javascript RegExp literals to solve that challenge.
+*/
